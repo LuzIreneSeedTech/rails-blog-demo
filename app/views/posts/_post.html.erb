@@ -5,6 +5,14 @@
   </p>
 
   <p>
+    posted by <%= link_to post.user.name, user_path(post.user) %> 
+  </p>
+
+  <p>
+    <%= pluralize post.views, "view" %>
+  </p>
+
+  <p>
     <strong>Content:</strong>
     <%= post.content %>
   </p>
