@@ -15,6 +15,7 @@ class PostsController < ApplicationController
     # the lines of code above is equal to the code below
 
     @post.update(views: @post.views + 1)
+    @comments = @post.comments.order(created_at: :desc)
   end
 
   # GET /posts/new
